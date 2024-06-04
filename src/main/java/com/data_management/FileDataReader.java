@@ -33,4 +33,9 @@ public class FileDataReader implements DataReader {
         }
     }
 
+    @Override
+    public void readData(DataStorage dataStorage, String websocketUrl) {
+
+    }
+
 }
