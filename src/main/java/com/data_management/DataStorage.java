@@ -14,7 +14,7 @@ import com.alerts.AlertGenerator;
  */
 public class DataStorage {
     private Map<Integer, Patient> patientMap; // Stores patient objects indexed by their unique patient ID.
-
+    private static DataStorage instance;
     /**
      * Constructs a new instance of DataStorage, initializing the underlying storage
      * structure.
@@ -22,7 +22,12 @@ public class DataStorage {
     public DataStorage() {
         this.patientMap = new HashMap<>();
     }
+    public static DataStorage getInstance() {
+        if (instance == null)
+            instance = new DataStorage();
 
+        return instance;
+    }
     /**
      * Adds or updates patient data in the storage.
      * If the patient does not exist, a new Patient object is created and added to
@@ -82,7 +87,7 @@ public class DataStorage {
      * 
      * @param args command line arguments
      */
-    public static void main(String[] args) {
+    public void main(String[] args) {
         // DataReader is not defined in this scope, should be initialized appropriately.
         // DataReader reader = new SomeDataReaderImplementation("path/to/data");
         DataStorage storage = new DataStorage();

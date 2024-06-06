@@ -65,14 +65,14 @@ public class AlertGenerator {
                     break;
             }
         }
-        if (isBloodPressureCritical(systolicPressures, diastolicPressures))
+/*        if (isBloodPressureCritical(systolicPressures, diastolicPressures))
             triggerAlert(new Alert(patientId, "BloodPressure", System.currentTimeMillis()));
         if (isBloodSaturationCritical(saturations))
             triggerAlert(new Alert(patientId, "BloodSaturation", System.currentTimeMillis()));
         if (isThereHypotensiveHypoxemia(saturations, systolicPressures))
             triggerAlert(new Alert(patientId, "HypotensiveHypoxemia", System.currentTimeMillis()));
         if (isECGDataCritical(ecgs))
-            triggerAlert(new Alert(patientId, "ECGData", System.currentTimeMillis()));
+            triggerAlert(new Alert(patientId, "ECGData", System.currentTimeMillis()));*/
 
     }
 
