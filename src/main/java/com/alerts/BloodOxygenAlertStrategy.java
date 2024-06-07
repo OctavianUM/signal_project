@@ -15,6 +15,7 @@ public class BloodOxygenAlertStrategy implements AlertStrategy {
         if (isBloodSaturationCritical(saturation))
             return new BloodOxygenAlertFactory().createAlert(patientRecords.get(0).getPatientId(), null, patientRecords.get(patientRecords.size()-1).getTimestamp());
 
+
         return null;
     }
 
